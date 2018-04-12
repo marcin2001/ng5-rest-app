@@ -1,0 +1,86 @@
+.mainBlock{
+    width: 100%;
+    height: 85%;
+    background: white;
+    box-shadow: 0px 2px  5px 0px gray  
+}
+.toolbar{
+    width: 100%;
+    height: 5.5%;
+    display: block;
+    background: #63B8FF;
+    display: flex;
+    align-items: center
+}
+.titleSite{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: lighter;
+}
+.menu{
+    width: 100%;
+    height: 6%;
+    margin: 0px;
+    padding: 0px;
+    background: #F8F8FF;
+    font-size: 15px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 0px 0px gray
+}
+.naw{ 
+    min-width: 200px;
+    height: 30%;
+}
+a{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 10px;
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 16px;
+    letter-spacing: 1.5px; 
+    font-weight: lighter;
+}
+.mat-container{
+    width: 100%;
+    height: 100%;
+}
+.example-sidenav{
+    box-shadow: 1.5px 0px 0px 0px gray;
+    padding: 0px;
+    background: white;
+}
+.burger-menu{
+    width: 25px;
+    height: 17px;
+    box-shadow: none;
+    cursor: pointer;
+}
+hr{
+    width: 25px;
+    height: 3px;
+    margin-top: 0px;
+    margin-bottom: 4px;
+    border: none;
+    background: white;
+}
+@media screen and (max-width: 1180px){
+    .mainBlock{
+        height: 85%;
+        box-shadow: 0px 0px  0px 0px gray  
+    }
+}

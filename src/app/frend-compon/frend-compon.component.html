@@ -1,0 +1,21 @@
+<app-search-in-list
+(searchFunction)='searchFunction($event)'>
+></app-search-in-list>
+ <div class="mainBlock">
+  <div class="blocklist">
+    <app-list-frends
+      [listFrends]='listFrendss'
+      (selectFrendClick)='selectFrend($event)'
+      (clickDeleteFrend)='deleteFrend($event)'
+      (clickPostFrend)='addFrend($event)'
+    >
+    </app-list-frends>
+  </div>  
+  <div class="blockChoice">
+    <app-slect-frends
+      [frend]="selectedFrend"
+      (triggerFrendUpdate)="updateFrend($event)"
+    >
+    </app-slect-frends>
+  </div>
+</div>  

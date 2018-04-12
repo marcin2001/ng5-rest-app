@@ -1,0 +1,60 @@
+{
+  "dataFamily": [
+    {
+      "name": "Oksana",
+      "lastname": "Martsin",
+      "old": "10",
+      "id": 7
+    },
+    {
+      "name": "Boguslava",
+      "lastname": "Martsin",
+      "old": "20",
+      "id": 8
+    },
+    {
+      "name": "Myroslav",
+      "lastname": "Martsin",
+      "old": "17",
+      "id": 9
+    },
+    {
+      "name": "Andriyana",
+      "lastname": "Martsin",
+      "old": "15",
+      "id": 10
+    },
+    {
+      "name": "Svyatoslav",
+      "lastname": "Martsin",
+      "old": "9",
+      "id": 12
+    },
+    {
+      "name": "Avgustyn",
+      "lastname": "Martsin",
+      "old": "5",
+      "id": 13
+    }
+  ],
+  "frends": [
+    {
+      "name": "Poll",
+      "lastname": "Borner",
+      "old": "20",
+      "id": 1
+    },
+    {
+      "name": "Martsin",
+      "lastname": "Myroslav",
+      "old": "20",
+      "id": 2
+    },
+    {
+      "name": "Nazar",
+      "lastname": "Kriner",
+      "old": "12",
+      "id": 3
+    }
+  ]
+}

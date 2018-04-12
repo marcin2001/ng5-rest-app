@@ -1,0 +1,20 @@
+<div class="block-info">
+    <h1 class="member-info">
+      Information about frend
+    </h1>
+    <div class="flex-info">
+        <div class="information">
+          <h2 class="font"  >
+             Name: <input class="inp" [(ngModel)]=' selectedFrend.name ' type="text" name="">
+          </h2>
+          <h2 class="font">
+             Lastname: <input class="inp" [(ngModel)]=' selectedFrend.lastname ' type="text" name="">
+          </h2>
+          <h2 class="font">
+             Old: <input class="inp" [(ngModel)]=' selectedFrend.old ' type="text" name="">
+          </h2>
+          <button type="button" (click)="updateFrend(selectedFrend)">Update frend</button>  
+        </div>
+         
+      </div>
+  </div>
