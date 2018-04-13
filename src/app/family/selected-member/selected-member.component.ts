@@ -7,9 +7,9 @@ import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angu
 })
 export class SelectedMemberComponent implements OnInit, OnChanges {
   @Input() member;
-  @Output() triggerMemberUpdate = new EventEmitter;
+  @Output() triggerMemberUpdate = new EventEmitter();
 
-  selectedMemeber ;
+  selectedMember;
   constructor() { }
 
   ngOnInit() {
@@ -17,13 +17,13 @@ export class SelectedMemberComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes) {
     if (changes.member.currentValue) {
-      this.selectedMemeber = Object.assign({}, changes.member.currentValue);
+      this.selectedMember = Object.assign({}, changes.member.currentValue);
     }
   }
 
-  updateMember(selectedMemeber) {
-    this.triggerMemberUpdate.emit(selectedMemeber);
-    this.selectedMemeber = {}
+  updateMember(selectedMember) {
+    this.triggerMemberUpdate.emit(selectedMember);
+    this.selectedMember = {}
   }
 
 }

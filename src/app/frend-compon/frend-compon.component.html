@@ -1,13 +1,13 @@
 <app-search-in-list
-(searchFunction)='searchFunction($event)'>
+(searchFunction)="searchFunction($event)">
 ></app-search-in-list>
  <div class="mainBlock">
   <div class="blocklist">
     <app-list-frends
-      [listFrends]='listFrendss'
-      (selectFrendClick)='selectFrend($event)'
-      (clickDeleteFrend)='deleteFrend($event)'
-      (clickPostFrend)='addFrend($event)'
+      [listFrends]='friendsList'
+      (selectFrendClick)="selectFrend($event)"
+      (clickDeleteFrend)="deleteFrend($event)"
+      (clickPostFrend)="addFriend($event)"
     >
     </app-list-frends>
   </div>  

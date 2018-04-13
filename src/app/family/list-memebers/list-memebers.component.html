@@ -1,0 +1,33 @@
+<div class="content-select">
+  <h1 class="list-memers">
+    List of members
+  </h1> 
+  <div class="flex-sect">
+    <div class="selected-block">
+      <div class="select">
+        <span class="heightBetwenBlocks"></span>
+        <div class="block-sel" *ngFor="let member of membersList">
+          <span (click)="clickSelectMember( member )"> {{ member.name + ' ' + member.lastname }}</span>
+          <span class="clickDeleteMember" (click)="clickDeleteMemberr(member.id)">DELETE</span>
+        </div>
+        <span class="heightBetwenBlocks spanAnother"></span>
+      </div>
+      <div class="added">
+        <button *ngIf="displayButton" class="replaceBlockAddMember" (click)="displayBlock()">Add memeber</button>
+        <div class="blockAddMember" *ngIf="displayInput">
+          <div class="blockWithInputForMembers">
+            <input class="inpad" type="text" [(ngModel)]='objMember.name' placeholder="Name">
+            <input class="inpad" type="text" [(ngModel)]='objMember.lastName' placeholder="Lastname">
+            <input class="inpad" type="text" [(ngModel)]='objMember.age' placeholder="Old">
+          </div>
+          <div class="blockForButtonToAddMember">
+            <button class="clickPushMember" (click)="clickPostMemberr( objMember )">
+              <p class="font-button"> + </p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -2,21 +2,9 @@
   "dataFamily": [
     {
       "name": "Oksana",
-      "lastname": "Martsin",
-      "old": "10",
+      "lastname": "Mart",
+      "old": "100",
       "id": 7
-    },
-    {
-      "name": "Boguslava",
-      "lastname": "Martsin",
-      "old": "20",
-      "id": 8
-    },
-    {
-      "name": "Myroslav",
-      "lastname": "Martsin",
-      "old": "17",
-      "id": 9
     },
     {
       "name": "Andriyana",
@@ -35,12 +23,18 @@
       "lastname": "Martsin",
       "old": "5",
       "id": 13
+    },
+    {
+      "name": "amoigo",
+      "lastname": "sdfsdf",
+      "old": "12",
+      "id": 14
     }
   ],
   "frends": [
     {
       "name": "Poll",
-      "lastname": "Borner",
+      "lastname": "Born",
       "old": "20",
       "id": 1
     },
@@ -55,6 +49,12 @@
       "lastname": "Kriner",
       "old": "12",
       "id": 3
+    },
+    {
+      "name": "ira",
+      "lastname": "ira",
+      "old": "123",
+      "id": 4
     }
   ]
 }

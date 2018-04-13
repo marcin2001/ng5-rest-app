@@ -1,32 +1,34 @@
 <div class="content-select">
-        <h1 class="list-memers">
-          list of frends
-        </h1>
-        <div class="flex-sect">
-          <div class="selected-block">
-          <div class="select">
-            <span class="heightBetwenBlocks"> </span>
-            <div class="block-sel" *ngFor=' let frend of listFrends ' >
-              <span (click)="clickSelectFrend( frend )" > {{ frend.name + ' ' + frend.lastname }}</span>
-              <span class="clickDeleteMember" (click)='clickDeleteFrendd(frend.id)' >DELETE</span>
-            </div>
-            <span class="heightBetwenBlocks spanAnother"></span>
-             
-          </div>
-          <div class="added">
-              <button *ngIf=' displayBlockbut ' class="replaceBlockAddMember" (click)='displayBlock()' >Add frend</button>
-              <div class="blockAddMember" *ngIf=' displayBlockinp'>
-                <div class="blockWithInputForMembers">
-                <input class="inpad" type="text"[(ngModel)]='objFrend.addedName' placeholder="Name">
-                <input class="inpad" type="text"[(ngModel)]='objFrend.addedLastname' placeholder="Lastname">
-                <input class="inpad" type="text"[(ngModel)]='objFrend.addedOld' placeholder="Old">
-                </div>
-              <div class="blockForButtonToAddMember">
-                <button class="clickPushMember" (click)=' clickPostFrendd(objFrend) '><p class="font-button"> + </p></button>
-              </div>
-            </div>
-          </div>       
+  <h1 class="list-memers">
+    list of frends
+  </h1>
+  <div class="flex-sect">
+    <div class="selected-block">
+      <div class="select">
+        <span class="heightBetwenBlocks"> </span>
+        <div class="block-sel" *ngFor="let frend of listFrends">
+          <span (click)="clickSelectFrend( frend )"> {{ frend.name + ' ' + frend.lastname }}</span>
+          <span class="clickDeleteMember" (click)="clickDeleteFriend(frend.id)">DELETE</span>
         </div>
-        </div>
-        
+        <span class="heightBetwenBlocks spanAnother"></span>
+
       </div>
+      <div class="added">
+        <button *ngIf="displayButton" class="replaceBlockAddMember" (click)="displayBlock()">Add frend</button>
+        <div class="blockAddMember" *ngIf=' displayInput'>
+          <div class="blockWithInputForMembers">
+            <input class="inpad" type="text" [(ngModel)]="objFriend.name" placeholder="Name">
+            <input class="inpad" type="text" [(ngModel)]="objFriend.lastName" placeholder="Lastname">
+            <input class="inpad" type="text" [(ngModel)]="objFriend.age" placeholder="Old">
+          </div>
+          <div class="blockForButtonToAddMember">
+            <button class="clickPushMember" (click)="clickPostFrendd(objFriend)">
+              <p class="font-button"> + </p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MembService } from '../app.service';
+import { MemberService } from '../app.service';
 
 @Component({
   selector: 'app-frend-compon',
@@ -7,58 +7,56 @@ import { MembService } from '../app.service';
   styleUrls: ['./frend-compon.component.css']
 })
 export class FrendComponComponent implements OnInit {
-
-  constructor( private familyMembers:  MembService){}
-  
-  ngOnInit() {
-    this.refreshFrend()
-  }
-  refreshFrend(){
-    this.familyMembers.getFrends()
-    .subscribe(data => {
-      this.listFrendss = data;
-    })
-  }
-  listFrendss;
+  friendsList;
   selectedFrend = {};
-  
 
+  constructor(private familyMembers: MemberService) { }
 
-  addFrend( objFrend ){
-    const NewFrend = {
-      name : objFrend.addedName,
-      lastname : objFrend.addedLastname,
-      old : objFrend.addedOld
-    };
-    this.familyMembers.addFrend( NewFrend )
-      .subscribe( data => {
-        this.refreshFrend()
-      } )
+  ngOnInit() {
+    this.loadFriends()
   }
-
-
-
-  deleteFrend(ferndId){
-    this.familyMembers.deleteFrend( ferndId )
-    .subscribe( data => {
-        this.refreshFrend();
+  loadFriends() {
+    this.familyMembers.getFrends()
+      .subscribe(data => {
+        this.friendsList = data;
       })
   }
-  selectFrend( frend ){
+
+  addFriend(objFriend) {
+    const NewFriend = {
+      name: objFriend.name,
+      lastname: objFriend.lastName,
+      old: objFriend.age
+    };
+    this.familyMembers.addFriend(NewFriend)
+      .subscribe(data => {
+        this.loadFriends()
+      })
+  }
+
+  deleteFrend(ferndId) {
+    this.familyMembers.deleteFrend(ferndId)
+      .subscribe(data => {
+        this.loadFriends();
+      })
+  }
+
+  selectFrend(frend) {
     this.selectedFrend = frend;
   }
-  
+
   updateFrend(frend) {
-     this.familyMembers.updateFrend(frend)
+    this.familyMembers.updateFrend(frend)
       .subscribe(data => {
-        this.refreshFrend();
+        this.loadFriends();
       });
   }
-  searchFunction( valueSearch ){
-      const dobleValueSearch = valueSearch.toLowerCase().trim();
-      this.familyMembers.getFindFrend(dobleValueSearch).subscribe( data => 
-        this.listFrendss = data
-       )
+
+  searchFunction(valueSearch) {
+    const rawValue = valueSearch.toLowerCase().trim();
+    this.familyMembers.getFindFrend(rawValue).subscribe(data => {
+      this.friendsList = data;
+    }) 
   }
 
 }

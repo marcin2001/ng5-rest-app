@@ -2,26 +2,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from "@angular/router";
-import { MembService } from './app.service';
+import { MemberService } from './app.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { SelectedMemberComponent } from './family-compon/selected-member/selected-member.component';
-import { ListMemebersComponent } from './family-compon/list-memebers/list-memebers.component';
+import { SelectedMemberComponent } from './family/selected-member/selected-member.component';
+import { ListMemebersComponent } from './family/list-memebers/list-memebers.component';
 import { SearchInListComponent } from './search-in-list/search-in-list.component';
-import { FamilyComponComponent } from './family-compon/family-compon.component';
+import { FamilyComponComponent } from './family/family.component';
 import { FrendComponComponent } from './frend-compon/frend-compon.component';
 import { listFrendssComponent } from './frend-compon/list-frends/list-frends.component';
 import { SlectFrendsComponent } from './frend-compon/slect-frends/slect-frends.component';
-import {MatButtonModule} from '@angular/material/button';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 const ROUTS = [
-  {path: '', redirectTo: 'family', pathMatch: 'full'},
-  {path: 'family' , component: FamilyComponComponent},
-  {path: 'frend' , component: FrendComponComponent},
-  {path: '**', redirectTo: ''}
+  { path: 'family', component: FamilyComponComponent },
+  { path: 'frend', component: FrendComponComponent },
+  { path: '**', redirectTo: 'family', pathMatch: 'full' }
 ]
 
 @NgModule({
@@ -33,7 +33,7 @@ const ROUTS = [
     FamilyComponComponent,
     FrendComponComponent,
     listFrendssComponent,
-    SlectFrendsComponent,
+    SlectFrendsComponent
   ],
   imports: [
     BrowserModule,
@@ -43,9 +43,10 @@ const ROUTS = [
     MatButtonModule,
     BrowserAnimationsModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule
   ],
-  providers: [MembService],
+  providers: [MemberService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FamilyComponComponent } from './family-compon.component';
+import { FamilyComponComponent } from './family.component';
 
 describe('FamilyComponComponent', () => {
   let component: FamilyComponComponent;

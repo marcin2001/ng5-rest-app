@@ -1,4 +1,4 @@
-import { Component, OnInit , Input , Output , EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-slect-frends',
@@ -10,7 +10,7 @@ export class SlectFrendsComponent implements OnInit {
   @Input() frend;
   @Output() triggerFrendUpdate = new EventEmitter;
 
-  selectedFrend;
+  selectedFrend = {};
   constructor() { }
 
   ngOnInit() {
@@ -24,6 +24,7 @@ export class SlectFrendsComponent implements OnInit {
 
   updateFrend(selectedFrend) {
     this.triggerFrendUpdate.emit(selectedFrend);
+    this.selectedFrend = {}
   }
 
 

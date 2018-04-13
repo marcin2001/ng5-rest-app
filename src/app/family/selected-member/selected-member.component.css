@@ -68,7 +68,7 @@ button{
     font-size: 15px;
     font-weight: lighter;
 }
-button:hover{
+button:hover:not([disabled]){
     background: #FFA500;
     color: white;
     cursor: pointer;
